@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Open Source Information Security Curriculum</title>
+
+
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+
+
+	<style>
+
+		/* Sections
+		 * --------------------------------------- */
+		#section0 img,
+		#section1 img{
+			margin: 20px 0 0 0;
+		}
+		#section2 img{
+			margin: 20px 0 0 52px;
+		}
+		#section3 img{
+			bottom: 0px;
+			position: absolute;
+			margin-left: -420px;
+		}
+		.intro p{
+			width: 50%;
+			margin: 0 auto;
+			font-size: 1.5em;
+		}
+		.twitter-share-button{
+			position: absolute;
+			z-index: 99;
+			right: 149px;
+			top: 9px;
+		}
+
+	</style>
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#F0D7B2', '#FFFFFF', '#7BAABE', 'whitesmoke', '#ccddff'],
+				 anchors: ['start-info', 'about-info', 'service-info', 'actual-info', 'contact-info'],
+				menu: '#menu',
+				scrollingSpeed: 1000
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+
+
+<div id="fullpage">
+	<div class="section active" id="section1">
+		<div class="slide">
+			<div class="intro">
+				<h2><b>Data types</b></h2><br>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/H4Z0S9ZbC0g?version=3&start=300&end=391" frameborder="0" allowfullscreen></iframe>
+				<br><br>
+				<h3><b>Understanding</b></h3>
+				<h5><table align="center" width="400"><tr><td>To demonstrate understanding of data types, create a simple C program (You can use <a href="https://www.visualstudio.com/downloads/">Visual studio</a>) with each data type listed in the video and debug the program with Ollydbg to see how the values are stored in assembly. <a href="https://www.ethicalhacker.net/columns/heffner/intro-to-reverse-engineering-part-2#ollyintro">Here</a> is an excellent Ollydbg tutorial.</td></tr></table></h5>
+				<br><h3><b>Practice</b></h3>
+				<h5><table align="center" width="400"><tr><td>For practice, try declaring multiple variables of the same type and in different orders and practice finding the entry point to the main function in these various scenarios. Then observe any differences in how each data type is declared in assembly.</td></tr></table></h5>
+				<br><h3><b>Notes</b></h3>
+				<h5><table align="center" width="400"><tr><td>In Visual studio 2015, you can enable compiler optimizations and disable exploit mitigations through the [Project]->[YourProjectName Properties] menu. Enable the compiler optimizations [C/C++->Optimizations] Optimization: /O1 (minimize for size), Security Check: Disable Security Check /GS- ; [Linker->General] Enable Incremental Linking: No (/INCREMENTAL:NO).</td></tr></table></h5>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="intro">
+				<h2><b>Binary and Hexadecimal Digits</b></h2><br>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/H4Z0S9ZbC0g?version=3&start=394&end=462" frameborder="0" allowfullscreen></iframe>
+				<br><br>
+				<h3><b>Understanding</b></h3>
+				<h5><table align="center" width="400"><tr><td>Read <a href="https://www.mathsisfun.com/binary-number-system.html">THIS</a> article. To demonstrate understanding of binary and hexadecimal digits, explain the bases of the different number systems to a friend. What is the base of each number system and how does it account for decimal having the digits 0-9, binary having the digits 0-1, and hexadecimal having the digits 0-F?</td></tr></table></h5>
+				<br><h3><b>Practice</b></h3>
+				<h5><table align="center" width="400"><tr><td>For practice, write down the first 10 numbers, between 0 and 15, that come to mind in decimal, then convert them first to binary, and then to decimal. Try all combinations of this exercise: decimal->binary->hexadecimal, decimal->hexadecimal->binary, hexadecimal->decimal->binary, hexadecimal->binary->decimal, binary->hexadecimal->decimal, binary->decimal->hexadecimal.</td></tr></table></h5>
+				<br><h3><b>Notes</b></h3>
+				<h5><table align="center" width="400"><tr><td></td></tr></table></h5>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="intro">
+				<img src="imgs/2.png" alt="Cool" />
+				<h1>Cool</h1>
+				<p>It just looks cool. Impress everybody with a simple and modern web design!</p>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="intro">
+				<img src="imgs/3.png" alt="Compatible" />
+				<h1>Compatible</h1>
+				<p>Working in modern and old browsers too! IE 8 users don't have the fault of using that horrible browser! Lets give them a chance to see your site in a proper way!</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
